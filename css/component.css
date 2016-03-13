@@ -1,0 +1,78 @@
+.grid {
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.grid li {
+	display: inline-block;
+	width: 440px;
+	margin: 0;
+	padding: 20px;
+	position: relative;
+}
+
+.grid figure {
+	margin: 0;
+	position: relative;
+}
+
+.grid figure img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.grid figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 30px;
+	background: #6920ca;
+	color: #fff;
+}
+
+/* Caption Style 1 */
+.cs-style-1 figcaption {
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	text-align: left;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
+	-moz-transition: -moz-transform 0.25s, opacity 0.25s;
+	transition: transform 0.25s, opacity 0.25s;
+}
+
+.no-touch .cs-style-1 figure:hover figcaption,
+.cs-style-1 figure.cs-hover figcaption {
+	opacity: 1;
+	-webkit-transform: translate(10px, 10px);
+	-moz-transform: translate(10px, 10px);
+	-ms-transform: translate(10px, 10px);
+	transform: translate(10px, 10px);
+}
+
+.cs-style-1 figcaption h3 {
+	margin-top: 20px;
+}
+
+.cs-style-1 figcaption span {
+	display: block;
+}
+
+.cs-style-1 figcaption a {
+	margin-top: 10px;
+}
+
+/* do we need this? */
+@media screen and (max-width: 31.5em) {
+	.grid {
+		padding: 10px 10px 100px 10px;
+	}
+	.grid li {
+		width: 100%;
+		min-width: 300px;
+	}
+}
